@@ -17,5 +17,20 @@
 
 ## Running stress tests
 
-- 
+#### Web interface:
+```
+locust --host=http://localhost:8001
+```
+
+![image](https://user-images.githubusercontent.com/9268203/67151850-4f442300-f2a2-11e9-9f1c-587bee1003a5.png)
+
+![image](https://user-images.githubusercontent.com/9268203/67151626-0a6abd00-f29f-11e9-85fd-5204b9951c53.png)
+
+
+#### Command line
+
+```
+locust --host=http://localhost:8001 --clients 100 --hatch-rate 2 --no-web
+```
+![image](https://user-images.githubusercontent.com/9268203/67151646-5e75a180-f29f-11e9-891e-ccdb2061cc92.png)
 
