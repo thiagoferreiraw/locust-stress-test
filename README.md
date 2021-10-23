@@ -8,18 +8,18 @@
 ## Prerequisites
 
 - Make sure you have python 3.7+ installed
-- Install [virtualenvwrapper](https://virtualenvwrapper.readthedocs.io/en/latest/install.html)
+- Install [poetry](https://python-poetry.org/) to manage dependencies.
 
 ## Installation
 
-- Create a virtual env with `mkvirtualenv locust-stress-tests`
-- Install requirements with `pip install -r requirements`
+- Install the project with: `poetry install`
 
 ## Running stress tests
 
+Feel free to clone the project [django-todo-list](https://github.com/thiagoferreiraw/django-todo-list) to test it out:
 #### Web interface:
 ```
-locust --host=http://localhost:8001
+poetry run locust --host=http://localhost:8000
 ```
 
 ![image](https://user-images.githubusercontent.com/9268203/67151850-4f442300-f2a2-11e9-9f1c-587bee1003a5.png)
@@ -30,7 +30,6 @@ locust --host=http://localhost:8001
 #### Command line
 
 ```
-locust --host=http://localhost:8001 --clients 100 --hatch-rate 2 --no-web
+poetry run locust --host=http://localhost:8000 --users 100 --spawn-rate 2 --headless
 ```
 ![image](https://user-images.githubusercontent.com/9268203/67151646-5e75a180-f29f-11e9-891e-ccdb2061cc92.png)
-
