@@ -1,19 +1,14 @@
-from locust import HttpLocust, TaskSet
 import lorem
+from locust import HttpUser, task, between
 
 
-def index(l):
-    l.client.get("/tasks/")
+class WebsiteUser(HttpUser):
+    wait_time = between(1, 3)
 
-def create(l):
-    l.client.post("/tasks/", {"title": lorem.sentence()})
+    @task(5)
+    def index(self):
+        self.client.get("/tasks/")
 
-class UserBehavior(TaskSet):
-    tasks = {index: 5, create: 1}
-
-
-class WebsiteUser(HttpLocust):
-    task_set = UserBehavior
-    min_wait = 5000
-    max_wait = 9000
-
+    @task(1)
+    def create(self):
+        self.client.post("/tasks/", {"title": lorem.sentence()})
