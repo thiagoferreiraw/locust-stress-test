@@ -1,5 +1,13 @@
 # Locust Stress tests 
 
+**Articles explaining the concepts in this repo:**
+- 🇺🇸 [Performing load tests with Python + Locust.io](https://medium.com/@tferreiraw/performing-load-tests-with-python-locust-io-62de7d91eebd) (2022)
+- 🇧🇷 [Como fazer testes de carga com Python + Locust.io](https://medium.com/whatsgooddev/como-fazer-testes-de-carga-com-python-locust-io-55ec6ae841b) (2021)
+
+
+
+
+
 ## Introduction
 
 [Locust](https://github.com/locustio/locust) is an open source load testing tool. From the original repo:
